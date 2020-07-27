@@ -84,7 +84,7 @@ class FlashingThread(threading.Thread):
                             "--after", "no_reset",
                             "write_flash",
                             "--flash_mode", self._config.mode,
-                            "0x00000", self._config.firmware_path])
+                            "0x10000", self._config.firmware_path])
 
             if self._config.erase_before_flash:
                 command.append("--erase-all")
@@ -442,4 +442,3 @@ def main():
 if __name__ == '__main__':
     __name__ = 'Main'
     main()
-
